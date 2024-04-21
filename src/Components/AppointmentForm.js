@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/AppointmentForm.css";
-import { ToastContainer, toast } from "react-toastify";
+
 
 function AppointmentForm() {
   useEffect(() => {
@@ -62,12 +62,7 @@ function AppointmentForm() {
     setPreferredMode("default");
     setFormErrors({});
 
-    toast.success("Appointment Scheduled !", {
-      position: toast.POSITION.TOP_CENTER,
-      onOpen: () => setIsSubmitted(true),
-      onClose: () => setIsSubmitted(false),
-    });
-  };
+    
 
   return (
     <div className="appointment-form-section">
@@ -162,9 +157,9 @@ function AppointmentForm() {
         <p>© 2013-2023 Health+. All rights reserved.</p>
       </div>
 
-      <ToastContainer autoClose={5000} limit={1} closeButton={false} />
+      
     </div>
   );
 }
-
+}
 export default AppointmentForm;
